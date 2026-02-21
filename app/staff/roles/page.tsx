@@ -32,13 +32,22 @@ export default function StaffRolesAndPermissionsPage() {
               <p className="mt-1 text-xs text-slate-500 dark:text-slate-400">
                 This is a static demo. In a real system you would create and edit roles here.
               </p>
-              <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
+              <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-4">
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-xs dark:border-slate-700 dark:bg-slate-800/60">
                   <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">
                     Tenant Admin
                   </p>
                   <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">
                     Full access to loans, borrowers, reports, configuration and staff management.
+                  </p>
+                </div>
+                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-xs dark:border-slate-700 dark:bg-slate-800/60">
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">
+                    Branch Manager
+                  </p>
+                  <p className="mt-1 text-xs text-slate-600 dark:text-slate-300">
+                    Manages loans, collections, and staff activity for specific branches without tenant-wide
+                    configuration access.
                   </p>
                 </div>
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 text-xs dark:border-slate-700 dark:bg-slate-800/60">
@@ -102,4 +111,3 @@ export default function StaffRolesAndPermissionsPage() {
     </AppShell>
   );
 }
-
