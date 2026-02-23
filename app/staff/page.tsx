@@ -24,7 +24,7 @@ export default function StaffAndRoleManagementPage() {
                     Staff Management
                   </h1>
                   <p className="mt-1 text-slate-500 dark:text-slate-400">
-                    Manage team access, invite new members, and control organization security.
+                    Manage team access, add new staff, and control organization security.
                   </p>
                 </div>
                 <div className="flex items-center gap-3">
@@ -42,12 +42,12 @@ export default function StaffAndRoleManagementPage() {
                     type="button"
                     onClick={() => setShowInviteModal(true)}
                     className="flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary/90"
-                    title="Invite a new staff member"
+                    title="Add a new staff member"
                   >
                     <span className="material-symbols-outlined text-lg" aria-hidden="true">
                       person_add
                     </span>
-                    Invite Staff
+                    Add Staff
                   </button>
                 </div>
               </div>
@@ -291,7 +291,7 @@ export default function StaffAndRoleManagementPage() {
               onClick={(event) => event.stopPropagation()}
             >
             <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4 dark:border-slate-800">
-              <h3 className="text-lg font-bold">Invite Team Member</h3>
+              <h3 className="text-lg font-bold">Add Staff Member</h3>
               <button
                 type="button"
                 className="p-1 text-slate-400 transition-colors hover:text-slate-600"
@@ -304,13 +304,13 @@ export default function StaffAndRoleManagementPage() {
             </div>
             <div className="p-6">
               <p className="mb-6 text-sm leading-relaxed text-slate-500">
-                Invitations will be sent to the email addresses provided below. You can assign multiple roles and
-                custom permissions.
+                Create a staff account with an email and role. In a full system, this would immediately grant access
+                based on the selected permissions.
               </p>
               <form className="space-y-4">
                 <div>
                   <label className="mb-1.5 block text-xs font-bold uppercase text-slate-500">
-                    Email Address
+                    Staff email
                   </label>
                   <input
                     type="email"
@@ -320,7 +320,7 @@ export default function StaffAndRoleManagementPage() {
                 </div>
                 <div>
                   <label className="mb-1.5 block text-xs font-bold uppercase text-slate-500">
-                    Assign Role
+                    Assign role
                   </label>
                   <select className="w-full rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm focus:border-transparent focus:ring-2 focus:ring-primary dark:border-slate-700 dark:bg-slate-800">
                     <option>Select a role...</option>
@@ -370,8 +370,12 @@ export default function StaffAndRoleManagementPage() {
               <button
                 type="button"
                 className="rounded-lg bg-primary px-6 py-2 text-sm font-bold text-white shadow-lg shadow-primary/20 transition-all hover:bg-primary/90"
+                onClick={() => {
+                  alert("Staff member added (demo only). In a real system this would create the staff user immediately.");
+                  setShowInviteModal(false);
+                }}
               >
-                Send Invitation
+                Add Staff
               </button>
             </div>
             </div>
